@@ -81,3 +81,49 @@
 
 -Ejemplo: `Stop-Service -Name "msedge.exe"`
 
+
+# GESTIÓN DE SERVICIOS
+
+## **CMD**
+### DETENER Y DESHABILITAR LOS SIGUIENTES SERVICIOS:
+
+#### AUDIO DE WINDOWS
+`sc stop AudioSrv`  
+
+`sc config AudioSrv start= disabled`
+#### ARCHIVOS SIN CONEXIÓN
+`sc stop CscService`  
+
+`sc config CscService start= disabled`
+
+### HABILITAR SERVICIO DE AUDIO DE WINDOWS
+- Forma 1  
+`sc config Audiosrv start-auto`  
+- Forma 2  
+`net start audiosrv`
+
+### ARRANCAR EL SERVICIO DE AUDIO DE WINDOWS
+`net start "AUDIO DE WINDOWS`
+
+### HABILITAR EL SERVICIO ARCHIVOS SIN CONEXIÓN
+`sc config "CsCService" start-=auto`
+
+### ARRANCAR EL SERVICIO ARCHIVOS SIN CONEXIÓN
+`net start "CsCService`
+
+## **WPS**
+
+### LISTAR LOS SERVICIOS QUE SE ENCUENTRAN DESHABILITADOS
+`Get-Service | Where-Object -Property Status -eq stopped`
+
+### LISTAR LOS SERVICIOS QUE SE ENCUENTRAN EN EJECUCCIÓN
+` Get-Service | Where-Object -Property Status -eq running`
+
+### Mostrar el servicio Administrador de usuarios junto con los servicios de los que depende
+`Get-Service -name UserManager -DependentServices`
+
+### Suspender el servicio Estación de trabajo
+`Suspend-Service -name LanmanWorkstation`
+
+### Reanudar el servicio Estación de trabajo
+`Get-Service LanmanWorkstation`
