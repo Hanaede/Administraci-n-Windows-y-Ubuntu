@@ -24,7 +24,7 @@
 `New-LocalGroup -Name ["nombre de grupo"]`
 
 ### CREAR USUARIO
-`new LocalUser -Name ["nombre de usuario"] -NoPassword`
+`New-LocalUser -Name ["nombre de usuario"] -NoPassword`
 
 ### AÑADIR USUARIO A GRUPO
 `Add-LocalGroupMember -Group ["nombre del grupo"] -Member ["nombre del usuario"]`
