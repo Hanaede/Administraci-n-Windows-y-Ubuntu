@@ -127,3 +127,20 @@
 
 ### Reanudar el servicio Estación de trabajo
 `Get-Service LanmanWorkstation`
+
+### Parar  el  servicio  Instrumental  de Administración  de  Windows 
+`Stop-Service -name Winmgmt -Force`
+
+### Iniciar  el  servicio  Administrador  de  mapas  descargados  
+`Start-Service MapsBroker`
+
+### Reiniciar el servicio Administrador de cuentas Web
+`Restart-Service TokenBroker`
+
+### Establecer  arranque  automático  para  el  servicio  Agente  de  eventos  de tiempo
+`Set-Service -name TimeBrokerSvc -StartupType Automatic`
+
+### Deshabilitar el servicio Archivos sin conexión
+`Set-Service -Name "CscServie" -Status Running -StartupType Disabled`  
+
+
