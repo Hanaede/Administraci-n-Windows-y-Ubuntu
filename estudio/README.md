@@ -58,9 +58,6 @@
 ### EJECUTAR REINICIO AUTOMÁTICO A LAS 23:00 CON COMENTARIO
 `shutdown /r /t 7200 /c "Reinicio programado`
 
-
-## **WPS**
-
 ### EJECUTAR EDGE, VER SU PID Y CERRARLO
 `start microsoft-edge:`  
 
@@ -68,6 +65,8 @@
 
 `taskkill /PID [PID] /f`
 
+
+## **WPS**
 
 ### EJECUTAR EDGE CON VENTANA MAXIMIZADA
 `Start-Process -filepath msedge.exe -WindowStyle maximized`
@@ -77,9 +76,9 @@
 
 
 ### PARAR UN PROGRAMA
-`Stop-Service -Name ["nombre de programa]`  
+`Stop-Process -Name [nombre de programa]`  
 
--Ejemplo: `Stop-Service -Name "msedge.exe"`
+-Ejemplo: `Stop-Process -Name notepad`
 
 
 # GESTIÓN DE SERVICIOS
@@ -129,6 +128,8 @@
 `Get-Service LanmanWorkstation`
 
 ### Parar  el  servicio  Instrumental  de Administración  de  Windows 
+`Stop-Service -Name ["nombre de programa]`  
+
 `Stop-Service -name Winmgmt -Force`
 
 ### Iniciar  el  servicio  Administrador  de  mapas  descargados  
@@ -142,5 +143,3 @@
 
 ### Deshabilitar el servicio Archivos sin conexión
 `Set-Service -Name "CscServie" -Status Running -StartupType Disabled`  
-
-
