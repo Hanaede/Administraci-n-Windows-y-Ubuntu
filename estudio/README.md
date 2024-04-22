@@ -47,6 +47,12 @@
 ### ELIMINAR GRUPO
 `Remove-LocalGroup -Name ["nombre del grupo"]`
 
+### VER USUARIO
+`Get-Localuser -Name ["nombre de usuario"]`
+
+### MODIFICAR USUARIO
+`Set-LocalUser -Name ["nombre de usuario"] {parámetros}`
+
 
 # GESTIÓN DE PROCESOS
 
@@ -125,7 +131,7 @@
 `Suspend-Service -name LanmanWorkstation`
 
 ### Reanudar el servicio Estación de trabajo
-`Get-Service LanmanWorkstation`
+`Resume-Service LanmanWorkstation`
 
 ### Parar  el  servicio  Instrumental  de Administración  de  Windows 
 `Stop-Service -Name ["nombre de programa]`  
